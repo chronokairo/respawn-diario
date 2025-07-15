@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guias completos e walkthroughs para dominar seus jogos favoritos - Respawn Diário">
+    <meta name="keywords" content="guias, walkthroughs, dicas, tutorial, gaming, jogos">
+    <title>Guias - Respawn Diário</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="logo-text">Respawn Diário</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="reviews.html" class="nav-link">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="noticias.html" class="nav-link">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="guias.html" class="nav-link active">Guias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="esports.html" class="nav-link">eSports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sobre.html" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contato.html" class="nav-link">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="perfil.html" class="nav-link">
+                                <i class="fas fa-user-circle"></i>
+                                Perfil
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content" id="main-content">
+                <div class="page-header-icon">
+                    <i class="fas fa-map"></i>
+                </div>
+                <h1 class="page-title">Guias</h1>
+                <p class="page-subtitle">
+                    Walkthroughs completos, dicas valiosas e estratégias para dominar 
+                    seus jogos favoritos. Nunca mais fique preso!
+                </p>
+                <div class="page-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Guias</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Jogos Cobertos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15k</span>
+                        <span class="stat-label">Ajudas Prestadas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Navigation -->
+    <section class="quick-nav-section">
+        <div class="container">
+            <div class="quick-nav">
+                <h2 class="quick-nav-title">Navegação Rápida</h2>
+                <div class="quick-nav-grid">
+                    <a href="#builds" class="quick-nav-card">
+                        <i class="fas fa-hammer"></i>
+                        <span>Builds & Estratégias</span>
+                    </a>
+                    <a href="#walkthroughs" class="quick-nav-card">
+                        <i class="fas fa-route"></i>
+                        <span>Walkthroughs</span>
+                    </a>
+                    <a href="#bosses" class="quick-nav-card">
+                        <i class="fas fa-dragon"></i>
+                        <span>Boss Fights</span>
+                    </a>
+                    <a href="#collectibles" class="quick-nav-card">
+                        <i class="fas fa-gem"></i>
+                        <span>Colecionáveis</span>
+                    </a>
+                    <a href="#achievements" class="quick-nav-card">
+                        <i class="fas fa-trophy"></i>
+                        <span>Conquistas</span>
+                    </a>
+                    <a href="#tips" class="quick-nav-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Dicas Gerais</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label class="filter-label">Filtrar por:</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="rpg">RPG</button>
+                        <button class="filter-btn" data-filter="souls-like">Souls-like</button>
+                        <button class="filter-btn" data-filter="fps">FPS</button>
+                        <button class="filter-btn" data-filter="strategy">Estratégia</button>
+                        <button class="filter-btn" data-filter="puzzle">Puzzle</button>
+                    </div>
+                </div>
+                
+                <div class="difficulty-filter">
+                    <label class="filter-label">Dificuldade:</label>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn" data-difficulty="beginner">
+                            <i class="fas fa-seedling"></i>
+                            Iniciante
+                        </button>
+                        <button class="difficulty-btn" data-difficulty="intermediate">
+                            <i class="fas fa-star"></i>
+                            Intermediário
+                        </button>
+                        <button class="difficulty-btn" data-difficulty="advanced">
+                            <i class="fas fa-fire"></i>
+                            Avançado
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Buscar guias..." id="guides-search">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Guide -->
+    <section class="featured-guide-section">
+        <div class="container">
+            <div class="featured-guide">
+                <div class="featured-content">
+                    <div class="featured-badge">
+                        <i class="fas fa-star"></i>
+                        Guia em Destaque
+                    </div>
+                    <h2 class="featured-title">Elden Ring: Guia Completo Shadow of the Erdtree</h2>
+                    <p class="featured-description">
+                        Explore todas as novas áreas, derrote chefes impossíveis e descubra segredos 
+                        ocultos na expansão mais aguardada do ano. Guia completo com mapas interativos, 
+                        builds recomendadas e estratégias detalhadas.
+                    </p>
+                    <div class="featured-meta">
+                        <div class="guide-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-clock"></i>
+                                15 min de leitura
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-signal"></i>
+                                Dificuldade: Avançado
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-check-circle"></i>
+                                100% Completo
+                            </span>
+                        </div>
+                        <div class="guide-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="João Souls" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">João Souls</span>
+                                <span class="author-role">Souls Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-play"></i>
+                            Começar Guia
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-bookmark"></i>
+                            Salvar
+                        </button>
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop" alt="Elden Ring DLC" loading="lazy">
+                    <div class="image-overlay">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides Grid -->
+    <section class="guides-section">
+        <div class="container">
+            <div class="guides-layout">
+                <!-- Main Guides Grid -->
+                <div class="guides-main">
+                    <div class="section-header">
+                        <h2 class="section-title">Todos os Guias</h2>
+                        <div class="view-toggles">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="guides-grid" id="guides-grid">
+                        <!-- Guias serão carregados dinamicamente -->
+                        
+                        <!-- Guide Card Template -->
+                        <article class="guide-card">
+                            <div class="guide-image">
+                                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=400&h=250&fit=crop" alt="Cyberpunk 2077" loading="lazy">
+                                <div class="guide-difficulty">
+                                    <span class="difficulty-badge intermediate">
+                                        <i class="fas fa-star"></i>
+                                        Intermediário
+                                    </span>
+                                </div>
+                                <div class="guide-completion">
+                                    <span class="completion-badge">95% Completo</span>
+                                </div>
+                            </div>
+                            <div class="guide-content">
+                                <div class="guide-meta">
+                                    <span class="guide-category">RPG</span>
+                                    <span class="guide-type">
+                                        <i class="fas fa-hammer"></i>
+                                        Build Guide
+                                    </span>
+                                </div>
+                                <h3 class="guide-title">Cyberpunk 2077: Melhores Builds Phantom Liberty</h3>
+                                <p class="guide-excerpt">
+                                    Descubra as builds mais poderosas para dominar Night City na expansão...
+                                </p>
+                                <div class="guide-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 95%"></div>
+                                    </div>
+                                    <span class="progress-text">22/23 seções</span>
+                                </div>
+                                <div class="guide-footer">
+                                    <div class="guide-author">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Alex Gamer" class="author-avatar">
+                                        <span class="author-name">Alex Gamer</span>
+                                    </div>
+                                    <div class="guide-stats">
+                                        <span class="stat-item">
+                                            <i class="fas fa-eye"></i>
+                                            2.1k
+                                        </span>
+                                        <span class="stat-item">
+                                            <i class="fas fa-bookmark"></i>
+                                            156
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="load-more-container">
+                        <button class="btn btn-primary" id="load-more-guides">
+                            <i class="fas fa-plus"></i>
+                            Carregar Mais Guias
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Guides Sidebar -->
+                <aside class="guides-sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Guias Populares</h3>
+                        <div class="popular-guides">
+                            <div class="popular-item">
+                                <div class="popular-rank">1</div>
+                                <div class="popular-info">
+                                    <h4 class="popular-title">Baldur's Gate 3: Romance Guide</h4>
+                                    <span class="popular-meta">8.2k visualizações</span>
+                                </div>
+                            </div>
+                            <div class="popular-item">
+                                <div class="popular-rank">2</div>
+                                <div class="popular-info">
+                                    <h4 class="popular-title">Elden Ring: All Boss Locations</h4>
+                                    <span class="popular-meta">6.7k visualizações</span>
+                                </div>
+                            </div>
+                            <div class="popular-item">
+                                <div class="popular-rank">3</div>
+                                <div class="popular-info">
+                                    <h4 class="popular-title">Cyberpunk 2077: Best Endings</h4>
+                                    <span class="popular-meta">5.3k visualizações</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Jogos em Alta</h3>
+                        <div class="trending-games">
+                            <div class="trending-item">
+                                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=60&h=60&fit=crop" alt="Baldur's Gate 3" class="game-thumb">
+                                <div class="game-info">
+                                    <h4 class="game-title">Baldur's Gate 3</h4>
+                                    <span class="game-guides">5 guias</span>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=60&h=60&fit=crop" alt="Elden Ring" class="game-thumb">
+                                <div class="game-info">
+                                    <h4 class="game-title">Elden Ring</h4>
+                                    <span class="game-guides">8 guias</span>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=60&h=60&fit=crop" alt="Cyberpunk 2077" class="game-thumb">
+                                <div class="game-info">
+                                    <h4 class="game-title">Cyberpunk 2077</h4>
+                                    <span class="game-guides">3 guias</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Solicitar Guia</h3>
+                        <p class="widget-description">
+                            Não encontrou o guia que procura? Solicite e nossa equipe criará especialmente para você!
+                        </p>
+                        <button class="btn btn-primary btn-full">
+                            <i class="fas fa-plus"></i>
+                            Solicitar Guia
+                        </button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Novos Guias Toda Semana</h2>
+                    <p class="newsletter-description">
+                        Receba os guias mais recentes e dicas exclusivas diretamente no seu email. 
+                        Nunca mais fique preso em um jogo!
+                    </p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Seu melhor email" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Inscrever-se
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Respawn Diário</span>
+                    </div>
+                    <p class="footer-description">
+                        Seu checkpoint diário no mundo dos videogames. 
+                        Conteúdo de qualidade para gamers apaixonados.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="guias.html">Guias</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Categorias</h3>
+                    <ul class="footer-links">
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="guias.html">Guias</a></li>
+                        <li><a href="esports.html">eSports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contato@respawndiario.com</p>
+                        <p><i class="fas fa-discord"></i> RespawnDiário#1337</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Respawn Diário. Todos os direitos reservados.</p>
+                    <p>Feito com <i class="fas fa-heart"></i> para a comunidade gamer</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/posts.js"></script>
+    <script src="../assets/js/components.js"></script>
+</body>
+</html>

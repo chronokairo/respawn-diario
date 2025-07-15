@@ -1,0 +1,117 @@
+{
+    "name": "Respawn Diário - Checkpoint Gamer",
+    "short_name": "Respawn Diário",
+    "description": "O ponto de renascimento diário de todo gamer que vive, joga e respira videogames.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#00ff88",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "pt-BR",
+    "categories": ["games", "entertainment", "news"],
+    "icons": [
+        {
+            "src": "./assets/images/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "./assets/images/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "./assets/images/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "./assets/images/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "./assets/images/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "./assets/images/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "./assets/images/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "./assets/images/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Reviews",
+            "short_name": "Reviews",
+            "description": "Veja as últimas análises de jogos",
+            "url": "/#reviews",
+            "icons": [
+                {
+                    "src": "./assets/images/shortcut-reviews.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Notícias",
+            "short_name": "Notícias",
+            "description": "Últimas notícias do mundo gamer",
+            "url": "/#noticias",
+            "icons": [
+                {
+                    "src": "./assets/images/shortcut-news.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Guias",
+            "short_name": "Guias",
+            "description": "Guias e walkthroughs completos",
+            "url": "/#guias",
+            "icons": [
+                {
+                    "src": "./assets/images/shortcut-guides.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "./assets/images/screenshot-1.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "platform": "wide",
+            "label": "Página inicial do Respawn Diário"
+        },
+        {
+            "src": "./assets/images/screenshot-mobile-1.png",
+            "sizes": "640x1136",
+            "type": "image/png",
+            "platform": "narrow",
+            "label": "Versão mobile do Respawn Diário"
+        }
+    ]
+}

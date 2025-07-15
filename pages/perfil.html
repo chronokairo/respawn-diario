@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personalize sua experiência no Respawn Diário - Configurações de perfil, temas e preferências">
+    <meta name="keywords" content="perfil, configurações, personalização, tema, preferências">
+    <title>Meu Perfil - Respawn Diário</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="logo-text">Respawn Diário</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="reviews.html" class="nav-link">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="noticias.html" class="nav-link">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="guias.html" class="nav-link">Guias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="esports.html" class="nav-link">eSports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sobre.html" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contato.html" class="nav-link">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="perfil.html" class="nav-link active">
+                                <i class="fas fa-user-circle"></i>
+                                Perfil
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header profile-header">
+        <div class="container">
+            <div class="page-header-content" id="main-content">
+                <div class="page-header-icon">
+                    <i class="fas fa-user-cog"></i>
+                </div>
+                <h1 class="page-title">Meu Perfil</h1>
+                <p class="page-subtitle">
+                    Personalize sua experiência no Respawn Diário. 
+                    Configure temas, preferências e muito mais para uma experiência única.
+                </p>
+                <div class="page-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">47</span>
+                        <span class="stat-label">Posts Lidos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Favoritos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">156</span>
+                        <span class="stat-label">Pontos XP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth Section (shown when not logged in) -->
+    <section class="auth-section" id="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h2 class="auth-title">Entre na Sua Conta</h2>
+                    <p class="auth-subtitle">Faça login para personalizar sua experiência gamer</p>
+                </div>
+
+                <!-- Login Form -->
+                <div class="auth-form-container" id="login-form-container">
+                    <form class="auth-form" id="login-form">
+                        <div class="form-group">
+                            <label class="form-label">Email ou Nome de Usuário</label>
+                            <input type="text" class="form-input" id="login-username" placeholder="Digite seu email ou usuário" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Senha</label>
+                            <div class="password-input">
+                                <input type="password" class="form-input" id="login-password" placeholder="Digite sua senha" required>
+                                <button type="button" class="password-toggle" id="login-password-toggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-options">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="remember-me">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">Lembrar de mim</span>
+                            </label>
+                            <a href="#" class="forgot-password" id="forgot-password-link">Esqueci minha senha</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Entrar
+                        </button>
+                    </form>
+                    
+                    <div class="auth-divider">
+                        <span>ou</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button class="btn btn-social btn-google">
+                            <i class="fab fa-google"></i>
+                            Entrar com Google
+                        </button>
+                        <button class="btn btn-social btn-discord">
+                            <i class="fab fa-discord"></i>
+                            Entrar com Discord
+                        </button>
+                        <button class="btn btn-social btn-steam">
+                            <i class="fab fa-steam"></i>
+                            Entrar com Steam
+                        </button>
+                    </div>
+                    
+                    <div class="auth-switch">
+                        <p>Não tem uma conta? <a href="#" id="show-register">Cadastre-se aqui</a></p>
+                    </div>
+                </div>
+
+                <!-- Register Form -->
+                <div class="auth-form-container hidden" id="register-form-container">
+                    <form class="auth-form" id="register-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Nome</label>
+                                <input type="text" class="form-input" id="register-name" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nome de Usuário</label>
+                                <input type="text" class="form-input" id="register-username" placeholder="Escolha um usuário" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" id="register-email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Senha</label>
+                            <div class="password-input">
+                                <input type="password" class="form-input" id="register-password" placeholder="Crie uma senha forte" required>
+                                <button type="button" class="password-toggle" id="register-password-toggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="password-strength" id="password-strength">
+                                <div class="strength-bar">
+                                    <div class="strength-fill"></div>
+                                </div>
+                                <span class="strength-text">Digite uma senha</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Confirmar Senha</label>
+                            <div class="password-input">
+                                <input type="password" class="form-input" id="register-confirm-password" placeholder="Confirme sua senha" required>
+                                <button type="button" class="password-toggle" id="confirm-password-toggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Data de Nascimento</label>
+                            <input type="date" class="form-input" id="register-birthdate" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="accept-terms" required>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">
+                                    Aceito os <a href="#" class="terms-link">Termos de Uso</a> e a 
+                                    <a href="#" class="privacy-link">Política de Privacidade</a>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="newsletter-signup" checked>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">Quero receber newsletter com novidades</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-user-plus"></i>
+                            Criar Conta
+                        </button>
+                    </form>
+                    
+                    <div class="auth-divider">
+                        <span>ou</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button class="btn btn-social btn-google">
+                            <i class="fab fa-google"></i>
+                            Cadastrar com Google
+                        </button>
+                        <button class="btn btn-social btn-discord">
+                            <i class="fab fa-discord"></i>
+                            Cadastrar com Discord
+                        </button>
+                        <button class="btn btn-social btn-steam">
+                            <i class="fab fa-steam"></i>
+                            Cadastrar com Steam
+                        </button>
+                    </div>
+                    
+                    <div class="auth-switch">
+                        <p>Já tem uma conta? <a href="#" id="show-login">Faça login aqui</a></p>
+                    </div>
+                </div>
+
+                <!-- Forgot Password Form -->
+                <div class="auth-form-container hidden" id="forgot-password-container">
+                    <form class="auth-form" id="forgot-password-form">
+                        <div class="forgot-header">
+                            <h3>Recuperar Senha</h3>
+                            <p>Digite seu email e enviaremos instruções para redefinir sua senha</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" id="forgot-email" placeholder="seu@email.com" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Instruções
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-full" id="back-to-login">
+                            <i class="fas fa-arrow-left"></i>
+                            Voltar ao Login
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Content (shown when logged in) -->
+    <section class="profile-section hidden" id="profile-section">
+        <div class="container">
+            <div class="profile-layout">
+                <!-- Profile Sidebar -->
+                <aside class="profile-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&h=120&fit=crop&crop=face" alt="Avatar do usuário" id="profile-avatar">
+                            <button class="avatar-edit-btn" id="change-avatar">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <div class="profile-info">
+                            <h3 class="profile-name" id="profile-name">GameMaster2025</h3>
+                            <p class="profile-level">Nível 7 - Gamer Experiente</p>
+                            <div class="profile-xp">
+                                <div class="xp-bar">
+                                    <div class="xp-fill" style="width: 65%"></div>
+                                </div>
+                                <span class="xp-text">156 / 250 XP</span>
+                            </div>
+                        </div>
+                        <div class="profile-badges">
+                            <div class="badge active" title="Leitor Assíduo">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="badge active" title="Comentarista">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="badge" title="Reviewer">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="badge" title="Streamer">
+                                <i class="fas fa-video"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="stats-card">
+                        <h4 class="stats-title">Estatísticas</h4>
+                        <div class="stats-list">
+                            <div class="stat-row">
+                                <span class="stat-label">Membro desde</span>
+                                <span class="stat-value">Jan 2025</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Categoria favorita</span>
+                                <span class="stat-value">Reviews</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Tempo médio de leitura</span>
+                                <span class="stat-value">5min</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Streak de dias</span>
+                                <span class="stat-value">7 dias</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Profile Main Content -->
+                <main class="profile-main">
+                    <!-- Profile Tabs -->
+                    <div class="profile-tabs">
+                        <button class="tab-btn active" data-tab="personal">
+                            <i class="fas fa-user"></i>
+                            Informações Pessoais
+                        </button>
+                        <button class="tab-btn" data-tab="preferences">
+                            <i class="fas fa-cog"></i>
+                            Preferências
+                        </button>
+                        <button class="tab-btn" data-tab="theme">
+                            <i class="fas fa-palette"></i>
+                            Tema & Aparência
+                        </button>
+                        <button class="tab-btn" data-tab="notifications">
+                            <i class="fas fa-bell"></i>
+                            Notificações
+                        </button>
+                        <button class="tab-btn" data-tab="gaming">
+                            <i class="fas fa-gamepad"></i>
+                            Perfil Gaming
+                        </button>
+                        <button class="tab-btn" data-tab="activity">
+                            <i class="fas fa-chart-line"></i>
+                            Atividade
+                        </button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <!-- Personal Information Tab -->
+                        <div class="tab-pane active" id="personal-tab">
+                            <div class="settings-section">
+                                <h3 class="section-title">Informações Pessoais</h3>
+                                <form class="profile-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">Nome de Usuário</label>
+                                            <input type="text" class="form-input" value="GameMaster2025" id="username">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Nome Real</label>
+                                            <input type="text" class="form-input" value="João Silva" id="real-name">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-input" value="joao@email.com" id="email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Data de Nascimento</label>
+                                            <input type="date" class="form-input" value="1995-03-15" id="birthdate">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Bio</label>
+                                        <textarea class="form-input" rows="4" id="bio" placeholder="Conte um pouco sobre você e sua paixão por games...">Gamer apaixonado há mais de 15 anos. Especialista em RPGs e jogos indie. Sempre em busca da próxima grande aventura!</textarea>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">Localização</label>
+                                            <input type="text" class="form-input" value="São Paulo, SP" id="location">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Website/Stream</label>
+                                            <input type="url" class="form-input" placeholder="https://twitch.tv/seuperfil" id="website">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Preferences Tab -->
+                        <div class="tab-pane" id="preferences-tab">
+                            <div class="settings-section">
+                                <h3 class="section-title">Preferências de Conteúdo</h3>
+                                
+                                <div class="preference-group">
+                                    <h4 class="preference-title">Categorias Favoritas</h4>
+                                    <div class="checkbox-grid">
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-label">Reviews</span>
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-label">Notícias</span>
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-label">Guias</span>
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-label">eSports</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="preference-group">
+                                    <h4 class="preference-title">Gêneros de Jogos</h4>
+                                    <div class="tag-selector">
+                                        <div class="tag-item active">RPG</div>
+                                        <div class="tag-item active">Action</div>
+                                        <div class="tag-item">Adventure</div>
+                                        <div class="tag-item active">Indie</div>
+                                        <div class="tag-item">Strategy</div>
+                                        <div class="tag-item">Sports</div>
+                                        <div class="tag-item active">FPS</div>
+                                        <div class="tag-item">Racing</div>
+                                        <div class="tag-item">Puzzle</div>
+                                        <div class="tag-item">Fighting</div>
+                                    </div>
+                                </div>
+
+                                <div class="preference-group">
+                                    <h4 class="preference-title">Plataformas</h4>
+                                    <div class="platform-grid">
+                                        <label class="platform-item">
+                                            <input type="checkbox" checked>
+                                            <div class="platform-card">
+                                                <i class="fab fa-playstation"></i>
+                                                <span>PlayStation</span>
+                                            </div>
+                                        </label>
+                                        <label class="platform-item">
+                                            <input type="checkbox" checked>
+                                            <div class="platform-card">
+                                                <i class="fab fa-xbox"></i>
+                                                <span>Xbox</span>
+                                            </div>
+                                        </label>
+                                        <label class="platform-item">
+                                            <input type="checkbox">
+                                            <div class="platform-card">
+                                                <i class="fab fa-nintendo-switch"></i>
+                                                <span>Nintendo</span>
+                                            </div>
+                                        </label>
+                                        <label class="platform-item">
+                                            <input type="checkbox" checked>
+                                            <div class="platform-card">
+                                                <i class="fas fa-desktop"></i>
+                                                <span>PC</span>
+                                            </div>
+                                        </label>
+                                        <label class="platform-item">
+                                            <input type="checkbox">
+                                            <div class="platform-card">
+                                                <i class="fas fa-mobile-alt"></i>
+                                                <span>Mobile</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Theme & Appearance Tab -->
+                        <div class="tab-pane" id="theme-tab">
+                            <div class="settings-section">
+                                <h3 class="section-title">Tema & Aparência</h3>
+                                
+                                <div class="theme-selector">
+                                    <h4 class="preference-title">Escolha seu Tema</h4>
+                                    <div class="theme-grid">
+                                        <label class="theme-option">
+                                            <input type="radio" name="theme" value="dark" checked>
+                                            <div class="theme-card dark">
+                                                <div class="theme-preview">
+                                                    <div class="preview-header"></div>
+                                                    <div class="preview-content">
+                                                        <div class="preview-card"></div>
+                                                        <div class="preview-card"></div>
+                                                    </div>
+                                                </div>
+                                                <span class="theme-name">Dark Mode</span>
+                                                <span class="theme-description">Para sessões noturnas</span>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="theme-option">
+                                            <input type="radio" name="theme" value="light">
+                                            <div class="theme-card light">
+                                                <div class="theme-preview">
+                                                    <div class="preview-header"></div>
+                                                    <div class="preview-content">
+                                                        <div class="preview-card"></div>
+                                                        <div class="preview-card"></div>
+                                                    </div>
+                                                </div>
+                                                <span class="theme-name">Light Mode</span>
+                                                <span class="theme-description">Para leitura diurna</span>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="theme-option">
+                                            <input type="radio" name="theme" value="auto">
+                                            <div class="theme-card auto">
+                                                <div class="theme-preview">
+                                                    <div class="preview-header"></div>
+                                                    <div class="preview-content">
+                                                        <div class="preview-card"></div>
+                                                        <div class="preview-card"></div>
+                                                    </div>
+                                                </div>
+                                                <span class="theme-name">Auto</span>
+                                                <span class="theme-description">Segue o sistema</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="color-scheme">
+                                    <h4 class="preference-title">Cor de Destaque</h4>
+                                    <div class="color-grid">
+                                        <label class="color-option">
+                                            <input type="radio" name="accent" value="green" checked>
+                                            <div class="color-circle green"></div>
+                                            <span>Verde Gaming</span>
+                                        </label>
+                                        <label class="color-option">
+                                            <input type="radio" name="accent" value="blue">
+                                            <div class="color-circle blue"></div>
+                                            <span>Azul Cyber</span>
+                                        </label>
+                                        <label class="color-option">
+                                            <input type="radio" name="accent" value="purple">
+                                            <div class="color-circle purple"></div>
+                                            <span>Roxo Neon</span>
+                                        </label>
+                                        <label class="color-option">
+                                            <input type="radio" name="accent" value="red">
+                                            <div class="color-circle red"></div>
+                                            <span>Vermelho Fire</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="display-options">
+                                    <h4 class="preference-title">Opções de Exibição</h4>
+                                    <div class="toggle-options">
+                                        <label class="toggle-item">
+                                            <span class="toggle-label">Animações</span>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </div>
+                                        </label>
+                                        <label class="toggle-item">
+                                            <span class="toggle-label">Efeitos de Partícula</span>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </div>
+                                        </label>
+                                        <label class="toggle-item">
+                                            <span class="toggle-label">Sons de Interface</span>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </div>
+                                        </label>
+                                        <label class="toggle-item">
+                                            <span class="toggle-label">Auto-play de Vídeos</span>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notifications Tab -->
+                        <div class="tab-pane" id="notifications-tab">
+                            <div class="settings-section">
+                                <h3 class="section-title">Configurações de Notificação</h3>
+                                
+                                <div class="notification-group">
+                                    <h4 class="preference-title">Email Notifications</h4>
+                                    <div class="notification-options">
+                                        <label class="notification-item">
+                                            <div class="notification-info">
+                                                <span class="notification-title">Novos Posts</span>
+                                                <span class="notification-desc">Receba notificações sobre novos conteúdos</span>
+                                            </div>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </div>
+                                        </label>
+                                        <label class="notification-item">
+                                            <div class="notification-info">
+                                                <span class="notification-title">Newsletter Semanal</span>
+                                                <span class="notification-desc">Resumo semanal dos melhores posts</span>
+                                            </div>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </div>
+                                        </label>
+                                        <label class="notification-item">
+                                            <div class="notification-info">
+                                                <span class="notification-title">Reviews de Jogos Favoritos</span>
+                                                <span class="notification-desc">Notificações sobre reviews dos seus gêneros favoritos</span>
+                                            </div>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </div>
+                                        </label>
+                                        <label class="notification-item">
+                                            <div class="notification-info">
+                                                <span class="notification-title">Promoções de Jogos</span>
+                                                <span class="notification-desc">Alertas sobre ofertas e promoções</span>
+                                            </div>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="notification-group">
+                                    <h4 class="preference-title">Notificações Push</h4>
+                                    <div class="notification-options">
+                                        <label class="notification-item">
+                                            <div class="notification-info">
+                                                <span class="notification-title">Breaking News</span>
+                                                <span class="notification-desc">Notícias urgentes sobre gaming</span>
+                                            </div>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </div>
+                                        </label>
+                                        <label class="notification-item">
+                                            <div class="notification-info">
+                                                <span class="notification-title">eSports Ao Vivo</span>
+                                                <span class="notification-desc">Alertas sobre torneios e partidas</span>
+                                            </div>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="notification-frequency">
+                                    <h4 class="preference-title">Frequência de Emails</h4>
+                                    <div class="frequency-options">
+                                        <label class="frequency-item">
+                                            <input type="radio" name="frequency" value="instant" checked>
+                                            <span>Instantâneo</span>
+                                        </label>
+                                        <label class="frequency-item">
+                                            <input type="radio" name="frequency" value="daily">
+                                            <span>Diário</span>
+                                        </label>
+                                        <label class="frequency-item">
+                                            <input type="radio" name="frequency" value="weekly">
+                                            <span>Semanal</span>
+                                        </label>
+                                        <label class="frequency-item">
+                                            <input type="radio" name="frequency" value="never">
+                                            <span>Nunca</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gaming Profile Tab -->
+                        <div class="tab-pane" id="gaming-tab">
+                            <div class="settings-section">
+                                <h3 class="section-title">Perfil Gaming</h3>
+                                
+                                <div class="gaming-accounts">
+                                    <h4 class="preference-title">Contas Gaming</h4>
+                                    <div class="accounts-list">
+                                        <div class="account-item">
+                                            <div class="account-info">
+                                                <i class="fab fa-steam"></i>
+                                                <div class="account-details">
+                                                    <span class="account-name">Steam</span>
+                                                    <span class="account-status connected">Conectado</span>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-secondary btn-sm">Desconectar</button>
+                                        </div>
+                                        <div class="account-item">
+                                            <div class="account-info">
+                                                <i class="fab fa-playstation"></i>
+                                                <div class="account-details">
+                                                    <span class="account-name">PlayStation Network</span>
+                                                    <span class="account-status">Não conectado</span>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary btn-sm">Conectar</button>
+                                        </div>
+                                        <div class="account-item">
+                                            <div class="account-info">
+                                                <i class="fab fa-xbox"></i>
+                                                <div class="account-details">
+                                                    <span class="account-name">Xbox Live</span>
+                                                    <span class="account-status connected">Conectado</span>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-secondary btn-sm">Desconectar</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="gaming-stats">
+                                    <h4 class="preference-title">Estatísticas de Jogo</h4>
+                                    <div class="stats-grid">
+                                        <div class="stat-card">
+                                            <div class="stat-icon">
+                                                <i class="fas fa-trophy"></i>
+                                            </div>
+                                            <div class="stat-info">
+                                                <span class="stat-number">247</span>
+                                                <span class="stat-label">Jogos na Library</span>
+                                            </div>
+                                        </div>
+                                        <div class="stat-card">
+                                            <div class="stat-icon">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <div class="stat-info">
+                                                <span class="stat-number">1,456h</span>
+                                                <span class="stat-label">Tempo Total</span>
+                                            </div>
+                                        </div>
+                                        <div class="stat-card">
+                                            <div class="stat-icon">
+                                                <i class="fas fa-medal"></i>
+                                            </div>
+                                            <div class="stat-info">
+                                                <span class="stat-number">89</span>
+                                                <span class="stat-label">Conquistas</span>
+                                            </div>
+                                        </div>
+                                        <div class="stat-card">
+                                            <div class="stat-icon">
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="stat-info">
+                                                <span class="stat-number">4.2</span>
+                                                <span class="stat-label">Avaliação Média</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="favorite-games">
+                                    <h4 class="preference-title">Jogos Favoritos</h4>
+                                    <div class="games-list">
+                                        <div class="game-item">
+                                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=60&h=60&fit=crop" alt="The Witcher 3">
+                                            <div class="game-info">
+                                                <span class="game-title">The Witcher 3</span>
+                                                <span class="game-hours">156 horas</span>
+                                            </div>
+                                            <button class="remove-btn">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="game-item">
+                                            <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=60&h=60&fit=crop" alt="Cyberpunk 2077">
+                                            <div class="game-info">
+                                                <span class="game-title">Cyberpunk 2077</span>
+                                                <span class="game-hours">89 horas</span>
+                                            </div>
+                                            <button class="remove-btn">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <button class="btn btn-outline add-game-btn">
+                                            <i class="fas fa-plus"></i>
+                                            Adicionar Jogo
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Tab -->
+                        <div class="tab-pane" id="activity-tab">
+                            <div class="settings-section">
+                                <h3 class="section-title">Sua Atividade</h3>
+                                
+                                <div class="activity-overview">
+                                    <div class="activity-stats">
+                                        <div class="activity-stat">
+                                            <span class="stat-number">47</span>
+                                            <span class="stat-label">Posts Lidos</span>
+                                        </div>
+                                        <div class="activity-stat">
+                                            <span class="stat-number">23</span>
+                                            <span class="stat-label">Comentários</span>
+                                        </div>
+                                        <div class="activity-stat">
+                                            <span class="stat-number">12</span>
+                                            <span class="stat-label">Favoritos</span>
+                                        </div>
+                                        <div class="activity-stat">
+                                            <span class="stat-number">7</span>
+                                            <span class="stat-label">Dias Consecutivos</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="recent-activity">
+                                    <h4 class="preference-title">Atividade Recente</h4>
+                                    <div class="activity-list">
+                                        <div class="activity-item">
+                                            <div class="activity-icon read">
+                                                <i class="fas fa-eye"></i>
+                                            </div>
+                                            <div class="activity-content">
+                                                <span class="activity-text">Leu <strong>Elden Ring - Review Completo</strong></span>
+                                                <span class="activity-time">2 horas atrás</span>
+                                            </div>
+                                        </div>
+                                        <div class="activity-item">
+                                            <div class="activity-icon favorite">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                            <div class="activity-content">
+                                                <span class="activity-text">Adicionou aos favoritos <strong>Top 10 Jogos Indie de 2025</strong></span>
+                                                <span class="activity-time">5 horas atrás</span>
+                                            </div>
+                                        </div>
+                                        <div class="activity-item">
+                                            <div class="activity-icon comment">
+                                                <i class="fas fa-comment"></i>
+                                            </div>
+                                            <div class="activity-content">
+                                                <span class="activity-text">Comentou em <strong>Valorant Champions 2025</strong></span>
+                                                <span class="activity-time">1 dia atrás</span>
+                                            </div>
+                                        </div>
+                                        <div class="activity-item">
+                                            <div class="activity-icon read">
+                                                <i class="fas fa-eye"></i>
+                                            </div>
+                                            <div class="activity-content">
+                                                <span class="activity-text">Leu <strong>Guia Completo - Baldur's Gate 3</strong></span>
+                                                <span class="activity-time">2 dias atrás</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reading-progress">
+                                    <h4 class="preference-title">Progresso de Leitura</h4>
+                                    <div class="progress-chart">
+                                        <div class="chart-header">
+                                            <span>Posts lidos nos últimos 7 dias</span>
+                                        </div>
+                                        <div class="chart-bars">
+                                            <div class="chart-bar" style="height: 60%">
+                                                <span class="bar-value">6</span>
+                                                <span class="bar-label">Dom</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 80%">
+                                                <span class="bar-value">8</span>
+                                                <span class="bar-label">Seg</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 40%">
+                                                <span class="bar-value">4</span>
+                                                <span class="bar-label">Ter</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 100%">
+                                                <span class="bar-value">10</span>
+                                                <span class="bar-label">Qua</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 70%">
+                                                <span class="bar-value">7</span>
+                                                <span class="bar-label">Qui</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 90%">
+                                                <span class="bar-value">9</span>
+                                                <span class="bar-label">Sex</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 30%">
+                                                <span class="bar-value">3</span>
+                                                <span class="bar-label">Sáb</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Actions -->
+                    <div class="profile-actions">
+                        <button class="btn btn-primary" id="save-profile">
+                            <i class="fas fa-save"></i>
+                            Salvar Configurações
+                        </button>
+                        <button class="btn btn-secondary" id="reset-profile">
+                            <i class="fas fa-undo"></i>
+                            Restaurar Padrões
+                        </button>
+                        <button class="btn btn-danger" id="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Sair da Conta
+                        </button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Respawn Diário</span>
+                    </div>
+                    <p class="footer-description">
+                        Seu checkpoint diário no mundo dos videogames. 
+                        Conteúdo de qualidade para gamers apaixonados.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Categorias</h3>
+                    <ul class="footer-links">
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="guias.html">Guias</a></li>
+                        <li><a href="esports.html">eSports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contato@respawndiario.com</p>
+                        <p><i class="fas fa-discord"></i> RespawnDiário#1337</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Respawn Diário. Todos os direitos reservados.</p>
+                    <p>Feito com <i class="fas fa-heart"></i> para a comunidade gamer</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/posts.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/profile.js"></script>
+</body>
+</html>

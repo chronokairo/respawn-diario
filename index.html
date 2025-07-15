@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Respawn Diário - O ponto de renascimento diário de todo gamer. Checkpoint de conhecimento, entretenimento e opinião sobre videogames.">
+    <meta name="keywords" content="games, videogames, blog, gaming, respawn, checkpoint, reviews, notícias">
+    <meta name="author" content="Respawn Diário">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://respawn-diario.com/">
+    <meta property="og:title" content="Respawn Diário - Checkpoint Gamer">
+    <meta property="og:description" content="O ponto de renascimento diário de todo gamer que vive, joga e respira videogames.">
+    <meta property="og:image" content="./assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://respawn-diario.com/">
+    <meta property="twitter:title" content="Respawn Diário - Checkpoint Gamer">
+    <meta property="twitter:description" content="O ponto de renascimento diário de todo gamer que vive, joga e respira videogames.">
+    <meta property="twitter:image" content="./assets/images/og-image.jpg">
+
+    <title>Respawn Diário - Checkpoint Gamer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="logo-text">Respawn Diário</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/reviews.html" class="nav-link">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/noticias.html" class="nav-link">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/guias.html" class="nav-link">Guias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/esports.html" class="nav-link">eSports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/sobre.html" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/contato.html" class="nav-link">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/perfil.html" class="nav-link">
+                                <i class="fas fa-user-circle"></i>
+                                Perfil
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="main-content" class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Respawn</span>
+                    <span class="title-line glow">Diário</span>
+                </h1>
+                <p class="hero-subtitle">
+                    O ponto de renascimento diário de todo gamer que vive, joga e respira videogames.
+                </p>
+                <p class="hero-description">
+                    Cada post é um novo <strong>checkpoint</strong> de conhecimento, entretenimento e opinião sincera sobre o mundo dos jogos.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#posts" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        Começar Jornada
+                    </a>
+                    <a href="pages/sobre.html" class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        Sobre Nós
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="gaming-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="particles">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts Section -->
+    <section id="posts" class="posts-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Últimos Checkpoints</h2>
+                <p class="section-subtitle">Conteúdo fresco direto do respawn</p>
+            </div>
+            
+            <div class="posts-grid" id="posts-grid">
+                <!-- Posts serão carregados dinamicamente -->
+            </div>
+            
+            <div class="load-more-container">
+                <button class="btn btn-primary" id="load-more">
+                    <i class="fas fa-plus"></i>
+                    Carregar Mais Posts
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Categorias</h2>
+                <p class="section-subtitle">Explore diferentes mundos gaming</p>
+            </div>
+            
+            <div class="categories-grid">
+                <a href="pages/reviews.html" class="category-card" data-category="reviews">
+                    <div class="category-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="category-title">Reviews</h3>
+                    <p class="category-description">Análises honestas e detalhadas dos jogos mais quentes</p>
+                    <span class="category-count">15 posts</span>
+                </a>
+                
+                <a href="pages/noticias.html" class="category-card" data-category="noticias">
+                    <div class="category-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="category-title">Notícias</h3>
+                    <p class="category-description">As últimas novidades do mundo dos videogames</p>
+                    <span class="category-count">23 posts</span>
+                </a>
+                
+                <a href="pages/guias.html" class="category-card" data-category="guias">
+                    <div class="category-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3 class="category-title">Guias</h3>
+                    <p class="category-description">Walkthroughs e dicas para dominar seus jogos favoritos</p>
+                    <span class="category-count">12 posts</span>
+                </a>
+                
+                <a href="pages/esports.html" class="category-card" data-category="esports">
+                    <div class="category-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="category-title">eSports</h3>
+                    <p class="category-description">Cobertura completa do cenário competitivo</p>
+                    <span class="category-count">8 posts</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Stay in the Game</h2>
+                    <p class="newsletter-description">
+                        Receba os melhores checkpoints diretamente no seu email. 
+                        Nunca perca uma atualização importante!
+                    </p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Seu melhor email" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Inscrever-se
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Respawn Diário</span>
+                    </div>
+                    <p class="footer-description">
+                        Seu checkpoint diário no mundo dos videogames. 
+                        Conteúdo de qualidade para gamers apaixonados.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Categorias</h3>
+                    <ul class="footer-links">
+                        <li><a href="pages/reviews.html">Reviews</a></li>
+                        <li><a href="pages/noticias.html">Notícias</a></li>
+                        <li><a href="pages/guias.html">Guias</a></li>
+                        <li><a href="pages/esports.html">eSports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Úteis</h3>
+                    <ul class="footer-links">
+                        <li><a href="pages/sobre.html">Sobre Nós</a></li>
+                        <li><a href="pages/contato.html">Contato</a></li>
+                        <li><a href="#privacidade">Privacidade</a></li>
+                        <li><a href="#termos">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contato@respawndiario.com</p>
+                        <p><i class="fas fa-discord"></i> RespawnDiário#1337</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Respawn Diário. Todos os direitos reservados.</p>
+                    <p>Feito com <i class="fas fa-heart"></i> para a comunidade gamer</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/posts.js"></script>
+    <script src="./assets/js/components.js"></script>
+</body>
+</html>

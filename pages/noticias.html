@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Últimas notícias do mundo dos videogames - Respawn Diário">
+    <meta name="keywords" content="notícias, gaming, videogames, novidades, lançamentos">
+    <title>Notícias - Respawn Diário</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="logo-text">Respawn Diário</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="reviews.html" class="nav-link">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="noticias.html" class="nav-link active">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="guias.html" class="nav-link">Guias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="esports.html" class="nav-link">eSports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sobre.html" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contato.html" class="nav-link">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="perfil.html" class="nav-link">
+                                <i class="fas fa-user-circle"></i>
+                                Perfil
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content" id="main-content">
+                <div class="page-header-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <h1 class="page-title">Notícias</h1>
+                <p class="page-subtitle">
+                    Fique por dentro das últimas novidades do mundo dos videogames. 
+                    Lançamentos, atualizações, eventos e muito mais!
+                </p>
+                <div class="page-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">23</span>
+                        <span class="stat-label">Notícias</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12.3k</span>
+                        <span class="stat-label">Visualizações</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Daily</span>
+                        <span class="stat-label">Atualizações</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breaking News -->
+    <section class="breaking-news">
+        <div class="container">
+            <div class="breaking-banner">
+                <div class="breaking-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="breaking-content">
+                    <span class="breaking-label">BREAKING</span>
+                    <h3 class="breaking-title">Nintendo Direct confirmado para próxima semana</h3>
+                    <p class="breaking-description">Novos jogos e atualizações serão revelados no evento especial</p>
+                </div>
+                <div class="breaking-time">
+                    <i class="fas fa-clock"></i>
+                    <span>2 horas atrás</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label class="filter-label">Filtrar por:</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Todas</button>
+                        <button class="filter-btn" data-filter="lancamentos">Lançamentos</button>
+                        <button class="filter-btn" data-filter="atualizacoes">Atualizações</button>
+                        <button class="filter-btn" data-filter="eventos">Eventos</button>
+                        <button class="filter-btn" data-filter="hardware">Hardware</button>
+                        <button class="filter-btn" data-filter="industria">Indústria</button>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Buscar notícias..." id="news-search">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="sort-container">
+                    <select class="sort-select" id="news-sort">
+                        <option value="date">Mais Recentes</option>
+                        <option value="views">Mais Lidas</option>
+                        <option value="comments">Mais Comentadas</option>
+                        <option value="trending">Em Alta</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="news-section">
+        <div class="container">
+            <div class="news-layout">
+                <!-- Featured News -->
+                <div class="featured-news">
+                    <h2 class="section-title">Destaque do Dia</h2>
+                    <article class="news-card featured">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=800&h=400&fit=crop" alt="PlayStation 6" loading="lazy">
+                            <div class="news-category">Hardware</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <time class="news-date">
+                                    <i class="fas fa-clock"></i>
+                                    8 Jan 2025
+                                </time>
+                                <span class="read-time">
+                                    <i class="fas fa-book-open"></i>
+                                    5 min
+                                </span>
+                            </div>
+                            <h3 class="news-title">PlayStation 6: Vazamentos revelam especificações técnicas</h3>
+                            <p class="news-excerpt">
+                                Novos rumores apontam para um salto tecnológico significativo no próximo console da Sony, 
+                                com foco em ray tracing avançado e compatibilidade com 8K nativo.
+                            </p>
+                            <div class="news-footer">
+                                <div class="news-author">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="João Tech" class="author-avatar">
+                                    <span class="author-name">João Tech</span>
+                                </div>
+                                <div class="news-stats">
+                                    <span class="stat-item">
+                                        <i class="fas fa-eye"></i>
+                                        3.2k
+                                    </span>
+                                    <span class="stat-item">
+                                        <i class="fas fa-comment"></i>
+                                        89
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- News Grid -->
+                <div class="news-grid" id="news-grid">
+                    <!-- Notícias serão carregadas dinamicamente -->
+                    
+                    <!-- News Card Template -->
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=200&fit=crop" alt="Elden Ring DLC" loading="lazy">
+                            <div class="news-category">Lançamentos</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <time class="news-date">
+                                    <i class="fas fa-clock"></i>
+                                    7 Jan 2025
+                                </time>
+                                <span class="read-time">
+                                    <i class="fas fa-book-open"></i>
+                                    3 min
+                                </span>
+                            </div>
+                            <h3 class="news-title">Elden Ring: Shadow of the Erdtree ganha data de lançamento</h3>
+                            <p class="news-excerpt">
+                                FromSoftware anuncia oficialmente a expansão mais aguardada do ano...
+                            </p>
+                            <div class="news-footer">
+                                <div class="news-author">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face" alt="Pedro News" class="author-avatar">
+                                    <span class="author-name">Pedro News</span>
+                                </div>
+                                <div class="news-stats">
+                                    <span class="stat-item">
+                                        <i class="fas fa-eye"></i>
+                                        1.8k
+                                    </span>
+                                    <span class="stat-item">
+                                        <i class="fas fa-comment"></i>
+                                        45
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Sidebar -->
+                <aside class="news-sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Trending Topics</h3>
+                        <div class="trending-list">
+                            <div class="trending-item">
+                                <span class="trending-number">#1</span>
+                                <span class="trending-topic">PlayStation 6</span>
+                            </div>
+                            <div class="trending-item">
+                                <span class="trending-number">#2</span>
+                                <span class="trending-topic">Nintendo Direct</span>
+                            </div>
+                            <div class="trending-item">
+                                <span class="trending-number">#3</span>
+                                <span class="trending-topic">Elden Ring DLC</span>
+                            </div>
+                            <div class="trending-item">
+                                <span class="trending-number">#4</span>
+                                <span class="trending-topic">Steam Deck 2</span>
+                            </div>
+                            <div class="trending-item">
+                                <span class="trending-number">#5</span>
+                                <span class="trending-topic">GTA 6</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Próximos Lançamentos</h3>
+                        <div class="upcoming-games">
+                            <div class="upcoming-item">
+                                <div class="upcoming-date">
+                                    <span class="date-day">15</span>
+                                    <span class="date-month">Jan</span>
+                                </div>
+                                <div class="upcoming-info">
+                                    <h4 class="upcoming-title">Granblue Fantasy Relink</h4>
+                                    <span class="upcoming-platform">PC, PS5</span>
+                                </div>
+                            </div>
+                            <div class="upcoming-item">
+                                <div class="upcoming-date">
+                                    <span class="date-day">22</span>
+                                    <span class="date-month">Jan</span>
+                                </div>
+                                <div class="upcoming-info">
+                                    <h4 class="upcoming-title">Skull and Bones</h4>
+                                    <span class="upcoming-platform">Multi</span>
+                                </div>
+                            </div>
+                            <div class="upcoming-item">
+                                <div class="upcoming-date">
+                                    <span class="date-day">28</span>
+                                    <span class="date-month">Fev</span>
+                                </div>
+                                <div class="upcoming-info">
+                                    <h4 class="upcoming-title">Helldivers 2</h4>
+                                    <span class="upcoming-platform">PC, PS5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            
+            <div class="load-more-container">
+                <button class="btn btn-primary" id="load-more-news">
+                    <i class="fas fa-plus"></i>
+                    Carregar Mais Notícias
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Notícias em Primeira Mão</h2>
+                    <p class="newsletter-description">
+                        Seja o primeiro a saber das novidades mais quentes do mundo gaming. 
+                        Newsletter diária com as principais notícias!
+                    </p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Seu melhor email" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Inscrever-se
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Respawn Diário</span>
+                    </div>
+                    <p class="footer-description">
+                        Seu checkpoint diário no mundo dos videogames. 
+                        Conteúdo de qualidade para gamers apaixonados.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Categorias</h3>
+                    <ul class="footer-links">
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="guias.html">Guias</a></li>
+                        <li><a href="esports.html">eSports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contato@respawndiario.com</p>
+                        <p><i class="fas fa-discord"></i> RespawnDiário#1337</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Respawn Diário. Todos os direitos reservados.</p>
+                    <p>Feito com <i class="fas fa-heart"></i> para a comunidade gamer</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/posts.js"></script>
+    <script src="../assets/js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reviews e análises honestas dos jogos mais quentes - Respawn Diário">
+    <meta name="keywords" content="reviews, análises, jogos, gaming, avaliação">
+    <title>Reviews - Respawn Diário</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="logo-text">Respawn Diário</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="reviews.html" class="nav-link active">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="noticias.html" class="nav-link">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="guias.html" class="nav-link">Guias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="esports.html" class="nav-link">eSports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sobre.html" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contato.html" class="nav-link">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="perfil.html" class="nav-link">
+                                <i class="fas fa-user-circle"></i>
+                                Perfil
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content" id="main-content">
+                <div class="page-header-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h1 class="page-title">Reviews</h1>
+                <p class="page-subtitle">
+                    Análises honestas e detalhadas dos jogos mais quentes. 
+                    Descubra se vale a pena investir seu tempo e dinheiro.
+                </p>
+                <div class="page-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Reviews</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.8</span>
+                        <span class="stat-label">Nota Média</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8.5k</span>
+                        <span class="stat-label">Visualizações</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label class="filter-label">Filtrar por:</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="pc">PC</button>
+                        <button class="filter-btn" data-filter="console">Console</button>
+                        <button class="filter-btn" data-filter="mobile">Mobile</button>
+                        <button class="filter-btn" data-filter="indie">Indie</button>
+                        <button class="filter-btn" data-filter="aaa">AAA</button>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Buscar reviews..." id="reviews-search">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="sort-container">
+                    <select class="sort-select" id="reviews-sort">
+                        <option value="date">Mais Recentes</option>
+                        <option value="rating">Melhor Avaliados</option>
+                        <option value="views">Mais Vistos</option>
+                        <option value="title">A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Grid -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="reviews-grid" id="reviews-grid">
+                <!-- Reviews serão carregados dinamicamente -->
+                
+                <!-- Review Card Template (será removido pelo JS) -->
+                <article class="review-card featured">
+                    <div class="review-image">
+                        <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&h=400&fit=crop" alt="Baldur's Gate 3" loading="lazy">
+                        <div class="review-rating">
+                            <span class="rating-score">9.5</span>
+                        </div>
+                        <div class="review-platform">
+                            <span class="platform-tag">PC</span>
+                            <span class="platform-tag">PS5</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-meta">
+                            <span class="review-category">RPG</span>
+                            <time class="review-date">6 Jan 2025</time>
+                        </div>
+                        <h3 class="review-title">Baldur's Gate 3: Game of the Year</h3>
+                        <p class="review-excerpt">
+                            Por que BG3 conquistou críticos e jogadores, se tornando um marco nos RPGs modernos.
+                        </p>
+                        <div class="review-footer">
+                            <div class="review-author">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Ana RPG" class="author-avatar">
+                                <div class="author-info">
+                                    <span class="author-name">Ana RPG</span>
+                                    <span class="author-role">RPG Specialist</span>
+                                </div>
+                            </div>
+                            <div class="review-stats">
+                                <span class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    1.8k
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-heart"></i>
+                                    134
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-comment"></i>
+                                    56
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="load-more-container">
+                <button class="btn btn-primary" id="load-more-reviews">
+                    <i class="fas fa-plus"></i>
+                    Carregar Mais Reviews
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Reviews em Primeira Mão</h2>
+                    <p class="newsletter-description">
+                        Receba nossas análises exclusivas e seja o primeiro a saber 
+                        quais jogos valem a pena!
+                    </p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Seu melhor email" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Inscrever-se
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Respawn Diário</span>
+                    </div>
+                    <p class="footer-description">
+                        Seu checkpoint diário no mundo dos videogames. 
+                        Conteúdo de qualidade para gamers apaixonados.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Categorias</h3>
+                    <ul class="footer-links">
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="guias.html">Guias</a></li>
+                        <li><a href="esports.html">eSports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contato@respawndiario.com</p>
+                        <p><i class="fas fa-discord"></i> RespawnDiário#1337</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Respawn Diário. Todos os direitos reservados.</p>
+                    <p>Feito com <i class="fas fa-heart"></i> para a comunidade gamer</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/posts.js"></script>
+    <script src="../assets/js/components.js"></script>
+</body>
+</html>

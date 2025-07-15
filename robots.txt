@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Permitir acesso a recursos estáticos
+Allow: /assets/
+Allow: /pages/
+Allow: /data/
+
+# Sitemap (quando disponível)
+# Sitemap: https://respawndiario.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Specific rules for different bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cobertura completa do cenário competitivo de eSports - Respawn Diário">
+    <meta name="keywords" content="esports, competitivo, torneios, campeonatos, gaming profissional">
+    <title>eSports - Respawn Diário</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="logo-text">Respawn Diário</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="reviews.html" class="nav-link">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="noticias.html" class="nav-link">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="guias.html" class="nav-link">Guias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="esports.html" class="nav-link active">eSports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sobre.html" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contato.html" class="nav-link">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="perfil.html" class="nav-link">
+                                <i class="fas fa-user-circle"></i>
+                                Perfil
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header esports-header">
+        <div class="container">
+            <div class="page-header-content" id="main-content">
+                <div class="page-header-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h1 class="page-title">eSports</h1>
+                <p class="page-subtitle">
+                    Cobertura completa do cenário competitivo mundial. 
+                    Torneios, análises, perfis de jogadores e tudo sobre gaming profissional.
+                </p>
+                <div class="page-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Artigos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Torneios Cobertos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">$50M+</span>
+                        <span class="stat-label">Prize Pools</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Section -->
+    <section class="live-section">
+        <div class="container">
+            <div class="live-banner">
+                <div class="live-indicator">
+                    <div class="live-dot"></div>
+                    <span class="live-text">AO VIVO</span>
+                </div>
+                <div class="live-content">
+                    <h3 class="live-title">Valorant Champions Tour - Final</h3>
+                    <p class="live-description">LOUD vs FNATIC • Grande Final • Map 3</p>
+                    <div class="live-viewers">
+                        <i class="fas fa-eye"></i>
+                        <span>127.3k espectadores</span>
+                    </div>
+                </div>
+                <div class="live-actions">
+                    <button class="btn btn-primary">
+                        <i class="fab fa-twitch"></i>
+                        Assistir
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Filters -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label class="filter-label">Jogos:</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="valorant">Valorant</button>
+                        <button class="filter-btn" data-filter="lol">League of Legends</button>
+                        <button class="filter-btn" data-filter="cs2">CS2</button>
+                        <button class="filter-btn" data-filter="dota2">Dota 2</button>
+                        <button class="filter-btn" data-filter="overwatch">Overwatch</button>
+                    </div>
+                </div>
+                
+                <div class="status-filter">
+                    <label class="filter-label">Status:</label>
+                    <div class="status-buttons">
+                        <button class="status-btn" data-status="live">
+                            <i class="fas fa-circle live-dot"></i>
+                            Ao Vivo
+                        </button>
+                        <button class="status-btn" data-status="upcoming">
+                            <i class="fas fa-clock"></i>
+                            Próximos
+                        </button>
+                        <button class="status-btn" data-status="finished">
+                            <i class="fas fa-check-circle"></i>
+                            Finalizados
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Buscar torneios..." id="esports-search">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tournament -->
+    <section class="featured-tournament">
+        <div class="container">
+            <div class="tournament-card featured">
+                <div class="tournament-header">
+                    <div class="tournament-game">
+                        <img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=60&h=60&fit=crop" alt="Valorant" class="game-logo">
+                        <span class="game-name">Valorant</span>
+                    </div>
+                    <div class="tournament-status live">
+                        <i class="fas fa-circle"></i>
+                        Ao Vivo
+                    </div>
+                </div>
+                <div class="tournament-content">
+                    <h2 class="tournament-title">Valorant Champions 2025</h2>
+                    <p class="tournament-description">
+                        O maior torneio de Valorant do ano está em andamento em Los Angeles. 
+                        24 equipes de todo o mundo competem por US$ 2 milhões em premiação.
+                    </p>
+                    <div class="tournament-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Los Angeles, EUA</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>15-25 Mar 2025</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>$2,000,000</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <span>24 equipes</span>
+                        </div>
+                    </div>
+                    <div class="tournament-teams">
+                        <h4 class="teams-title">Semifinalistas</h4>
+                        <div class="teams-grid">
+                            <div class="team-card">
+                                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=40&h=40&fit=crop" alt="LOUD" class="team-logo">
+                                <span class="team-name">LOUD</span>
+                                <span class="team-region">BR</span>
+                            </div>
+                            <div class="team-card">
+                                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=40&h=40&fit=crop" alt="FNATIC" class="team-logo">
+                                <span class="team-name">FNATIC</span>
+                                <span class="team-region">EMEA</span>
+                            </div>
+                            <div class="team-card">
+                                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=40&h=40&fit=crop" alt="DRX" class="team-logo">
+                                <span class="team-name">DRX</span>
+                                <span class="team-region">KR</span>
+                            </div>
+                            <div class="team-card">
+                                <img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=40&h=40&fit=crop" alt="NRG" class="team-logo">
+                                <span class="team-name">NRG</span>
+                                <span class="team-region">NA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tournament-actions">
+                    <button class="btn btn-primary">
+                        <i class="fab fa-twitch"></i>
+                        Assistir Ao Vivo
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-chart-line"></i>
+                        Ver Bracket
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- eSports Content -->
+    <section class="esports-content">
+        <div class="container">
+            <div class="esports-layout">
+                <!-- Main Content -->
+                <div class="esports-main">
+                    <div class="section-header">
+                        <h2 class="section-title">Últimas do eSports</h2>
+                        <div class="content-tabs">
+                            <button class="tab-btn active" data-tab="all">Todos</button>
+                            <button class="tab-btn" data-tab="tournaments">Torneios</button>
+                            <button class="tab-btn" data-tab="players">Jogadores</button>
+                            <button class="tab-btn" data-tab="teams">Equipes</button>
+                            <button class="tab-btn" data-tab="analysis">Análises</button>
+                        </div>
+                    </div>
+                    
+                    <div class="esports-grid" id="esports-grid">
+                        <!-- Conteúdo será carregado dinamicamente -->
+                        
+                        <!-- eSports Card Template -->
+                        <article class="esports-card">
+                            <div class="esports-image">
+                                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=400&h=250&fit=crop" alt="CS2 Major" loading="lazy">
+                                <div class="esports-category">Torneio</div>
+                                <div class="esports-game">
+                                    <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=30&h=30&fit=crop" alt="CS2" class="game-icon">
+                                </div>
+                            </div>
+                            <div class="esports-content">
+                                <div class="esports-meta">
+                                    <time class="esports-date">
+                                        <i class="fas fa-clock"></i>
+                                        7 Jan 2025
+                                    </time>
+                                    <span class="esports-type">
+                                        <i class="fas fa-trophy"></i>
+                                        Major
+                                    </span>
+                                </div>
+                                <h3 class="esports-title">CS2: Major de Paris - Análise Completa</h3>
+                                <p class="esports-excerpt">
+                                    Tudo sobre o Major de Counter-Strike 2 em Paris, com análise das equipes 
+                                    e principais jogadas que definiram o torneio.
+                                </p>
+                                <div class="esports-footer">
+                                    <div class="esports-author">
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face" alt="Pedro Pro" class="author-avatar">
+                                        <div class="author-info">
+                                            <span class="author-name">Pedro Pro</span>
+                                            <span class="author-role">eSports Analyst</span>
+                                        </div>
+                                    </div>
+                                    <div class="esports-stats">
+                                        <span class="stat-item">
+                                            <i class="fas fa-eye"></i>
+                                            743
+                                        </span>
+                                        <span class="stat-item">
+                                            <i class="fas fa-comment"></i>
+                                            12
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="load-more-container">
+                        <button class="btn btn-primary" id="load-more-esports">
+                            <i class="fas fa-plus"></i>
+                            Carregar Mais Conteúdo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- eSports Sidebar -->
+                <aside class="esports-sidebar">
+                    <!-- Upcoming Matches -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Próximas Partidas</h3>
+                        <div class="matches-list">
+                            <div class="match-item">
+                                <div class="match-time">
+                                    <span class="time">14:30</span>
+                                    <span class="date">Hoje</span>
+                                </div>
+                                <div class="match-teams">
+                                    <div class="team">
+                                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=30&h=30&fit=crop" alt="LOUD" class="team-logo">
+                                        <span class="team-name">LOUD</span>
+                                    </div>
+                                    <span class="vs">vs</span>
+                                    <div class="team">
+                                        <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=30&h=30&fit=crop" alt="FNATIC" class="team-logo">
+                                        <span class="team-name">FNATIC</span>
+                                    </div>
+                                </div>
+                                <div class="match-tournament">Valorant Champions</div>
+                            </div>
+                            <div class="match-item">
+                                <div class="match-time">
+                                    <span class="time">18:00</span>
+                                    <span class="date">Amanhã</span>
+                                </div>
+                                <div class="match-teams">
+                                    <div class="team">
+                                        <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=30&h=30&fit=crop" alt="T1" class="team-logo">
+                                        <span class="team-name">T1</span>
+                                    </div>
+                                    <span class="vs">vs</span>
+                                    <div class="team">
+                                        <img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=30&h=30&fit=crop" alt="G2" class="team-logo">
+                                        <span class="team-name">G2</span>
+                                    </div>
+                                </div>
+                                <div class="match-tournament">LoL LCK</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tournament Standings -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Classificação VCT</h3>
+                        <div class="standings-list">
+                            <div class="standing-item">
+                                <div class="standing-position">1</div>
+                                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=25&h=25&fit=crop" alt="LOUD" class="team-logo">
+                                <span class="team-name">LOUD</span>
+                                <div class="standing-points">
+                                    <span class="points">2-0</span>
+                                </div>
+                            </div>
+                            <div class="standing-item">
+                                <div class="standing-position">2</div>
+                                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=25&h=25&fit=crop" alt="FNATIC" class="team-logo">
+                                <span class="team-name">FNATIC</span>
+                                <div class="standing-points">
+                                    <span class="points">2-1</span>
+                                </div>
+                            </div>
+                            <div class="standing-item">
+                                <div class="standing-position">3</div>
+                                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=25&h=25&fit=crop" alt="DRX" class="team-logo">
+                                <span class="team-name">DRX</span>
+                                <div class="standing-points">
+                                    <span class="points">1-1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Player Stats -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Top Jogadores</h3>
+                        <div class="players-list">
+                            <div class="player-item">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="aspas" class="player-avatar">
+                                <div class="player-info">
+                                    <span class="player-name">aspas</span>
+                                    <span class="player-team">LOUD</span>
+                                </div>
+                                <div class="player-stat">
+                                    <span class="stat-value">1.35</span>
+                                    <span class="stat-label">K/D</span>
+                                </div>
+                            </div>
+                            <div class="player-item">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Derke" class="player-avatar">
+                                <div class="player-info">
+                                    <span class="player-name">Derke</span>
+                                    <span class="player-team">FNATIC</span>
+                                </div>
+                                <div class="player-stat">
+                                    <span class="stat-value">1.28</span>
+                                    <span class="stat-label">K/D</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">eSports em Tempo Real</h2>
+                    <p class="newsletter-description">
+                        Fique por dentro de todos os torneios, resultados e novidades do cenário 
+                        competitivo. Newsletter especializada em eSports!
+                    </p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Seu melhor email" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Inscrever-se
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Respawn Diário</span>
+                    </div>
+                    <p class="footer-description">
+                        Seu checkpoint diário no mundo dos videogames. 
+                        Conteúdo de qualidade para gamers apaixonados.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="esports.html">eSports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Categorias</h3>
+                    <ul class="footer-links">
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="guias.html">Guias</a></li>
+                        <li><a href="esports.html">eSports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contato@respawndiario.com</p>
+                        <p><i class="fas fa-discord"></i> RespawnDiário#1337</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Respawn Diário. Todos os direitos reservados.</p>
+                    <p>Feito com <i class="fas fa-heart"></i> para a comunidade gamer</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/posts.js"></script>
+    <script src="../assets/js/components.js"></script>
+</body>
+</html>
