@@ -848,33 +848,21 @@ class ProfileManager {
     }
 
     loadUserData() {
-        if (this.userSettings.personal) {
-            Object.entries(this.userSettings.personal).forEach(([key, value]) => {
-                const input = document.getElementById(key);
-                if (input) {
-                    input.value = value;
-                }
-            });
-        }
-
-        if (this.userSettings.avatar) {
-            document.getElementById('profile-avatar').src = this.userSettings.avatar;
-        }
-
-        if (this.userSettings.theme) {
-            const themeInput = document.querySelector(`input[name="theme"][value="${this.userSettings.theme}"]`);
-            if (themeInput) {
-                themeInput.checked = true;
-                this.changeTheme(this.userSettings.theme);
-            }
-        }
-
-        if (this.userSettings.accentColor) {
-            const colorInput = document.querySelector(`input[name="accent"][value="${this.userSettings.accentColor}"]`);
-            if (colorInput) {
-                colorInput.checked = true;
-                this.changeAccentColor(this.userSettings.accentColor);
-            }
+        // Carrega dados do usuário logado do localStorage
+        const userData = localStorage.getItem('respawn-diario-user');
+        if (userData) {
+            const user = JSON.parse(userData);
+            // Atualiza nome, email, avatar, XP, etc. no perfil
+            const nameEl = document.getElementById('profile-name');
+            if (nameEl) nameEl.textContent = user.name || user.username;
+            const emailEl = document.getElementById('email');
+            if (emailEl) emailEl.value = user.email || '';
+            const avatarEl = document.getElementById('profile-avatar');
+            if (avatarEl && user.avatar) avatarEl.src = user.avatar;
+            // XP e nível
+            const xpText = document.querySelector('.xp-text');
+            if (xpText && user.xp && user.maxXp) xpText.textContent = `${user.xp} / ${user.maxXp} XP`;
+            // Outros campos podem ser sincronizados aqui
         }
     }
 

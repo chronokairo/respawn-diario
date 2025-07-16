@@ -31,7 +31,11 @@ router.post('/register', async (req, res) => {
                 error: 'Username, email e password são obrigatórios'
             });
         }
-
+        // Validação de email
+        const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ error: 'Email inválido' });
+        }
         if (password.length < 6) {
             return res.status(400).json({
                 error: 'Password deve ter pelo menos 6 caracteres'

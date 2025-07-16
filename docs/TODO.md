@@ -3,12 +3,53 @@
 
 ---
 
+# ✅ Checklist de Melhorias, Inclusões e Refatorações
+
+## 📚 Documentação
+- [ ] Adicionar exemplos de uso da API no README
+- [ ] Documentar endpoints e modelos de dados
+- [ ] Guia de deploy detalhado
+
+## 🧪 Testes
+- [ ] Testes unitários para backend (Jest/Supertest)
+- [ ] Testes de integração para rotas principais
+- [ ] Testes de usabilidade no frontend
+
+## 🔒 Segurança
+- [ ] Validação de dados no backend (express-validator)
+- [ ] Limitar uploads (tamanho/tipo)
+- [ ] Rate limiting nas rotas sensíveis
+
+## ⚙️ DevOps
+- [ ] Linter e prettier configurados
+- [ ] CI/CD básico (GitHub Actions)
+- [ ] Scripts de seed/reset para banco
+
+## 🎨 Frontend
+- [ ] PWA (manifest, offline, add to home)
+- [ ] Animações suaves (transições, feedback visual)
+- [ ] Acessibilidade (alt nas imagens, navegação por teclado)
+
+## 🖥️ Backend
+- [ ] Paginação e filtros nos endpoints de posts
+- [ ] Logs de erro detalhados
+- [ ] Refatorar rotas para controllers separados
+
+## ♻️ Refatorações Gerais
+- [ ] Separar lógica de negócio dos controllers
+- [ ] Padronizar nomes de arquivos e variáveis (camelCase/snake_case)
+- [ ] Centralizar configurações (ex: paths, env)
+- [ ] Reaproveitar componentes no frontend
+- [ ] Modularizar middlewares
+
+---
+
 ## 🎨 **FRONTEND**
 
 ### 📱 **UX e Interface**
 - [ ] **Sistema de Temas**
-  - [ ] Toggle Dark/Light mode
-  - [ ] Salvar preferência no localStorage
+  - [x] Toggle Dark/Light mode
+  - [x] Salvar preferência no localStorage
   
 - [ ] **Responsividade**
   - [ ] Melhorar layout em tablets
@@ -63,13 +104,10 @@ POST   /api/newsletter         # Newsletter
 
 ### 🔐 **Autenticação Simples**
 - [ ] **JWT Básico**
-  - [ ] Login com email/senha
-  - [ ] Middleware de autenticação
-  - [ ] Hash de senhas (bcrypt)
-
-- [ ] **Roles**
-  - [ ] Admin vs User
-  - [ ] Proteção de rotas
+  - [x] Login com email/senha funcional
+  - [x] Middleware de autenticação JWT
+  - [x] Hash de senhas (bcrypt)
+  - [x] Proteção de rotas (admin/user)
 
 ### 📝 **Admin Panel Básico**
 - [ ] **CRUD Posts**

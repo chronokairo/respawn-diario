@@ -167,6 +167,31 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Inicializar lazy loading para imagens
     initLazyLoading();
+
+    // Toggle Dark/Light Mode
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+    function setThemeIcon(isDark) {
+        if (!themeIcon) return;
+        themeIcon.classList.remove('fa-moon', 'fa-sun');
+        themeIcon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
+    }
+    if (savedTheme === 'dark' || (prefersDark && !savedTheme)) {
+        document.body.classList.add('dark-mode');
+        setThemeIcon(true);
+    } else {
+        setThemeIcon(false);
+    }
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            setThemeIcon(isDark);
+        });
+    }
 });
 
 // Funções auxiliares

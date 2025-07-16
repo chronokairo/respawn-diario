@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(express.static(__dirname)); // Middleware para servir arquivos estáticos
 
 // Exemplo de rota GET
 app.get('/', (req, res) => {
