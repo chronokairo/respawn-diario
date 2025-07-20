@@ -1,5 +1,10 @@
 // Main JavaScript - Respawn Diário
 document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar i18n se disponível
+    if (typeof I18n !== 'undefined') {
+        window.i18n = new I18n();
+    }
+    
     // Elementos do DOM
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
@@ -104,9 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-            
-            // Simulação de envio
+            const emailInput = this.querySelector('input[type="email"]');
+            const email = sanitizeInput(emailInput.value);
+            // Simulação de envio seguro
             showToast('Inscrição realizada com sucesso! Bem-vindo ao Respawn Diário! 🎮', 'success');
             this.reset();
         });
@@ -192,7 +197,36 @@ document.addEventListener('DOMContentLoaded', function() {
             setThemeIcon(isDark);
         });
     }
+
+    // Performance: Minificação automática de CSS e JS em produção
+    // (Sugestão para build, mas pode ser documentado para uso com ferramentas como Terser/CSSNano)
+    // Performance: Lazy loading já implementado para imagens (img[data-src])
+    // Performance: Sugestão de compressão de imagens - usar formatos modernos (WebP/AVIF)
+    // Performance: Adicionar atributo 'loading="lazy"' em todas as imagens
+
+    document.querySelectorAll('img').forEach(img => {
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+    });
 });
+
+// Acessibilidade: Detectar navegação por teclado para foco visível
+(function() {
+    function handleFirstTab(e) {
+        if (e.key === 'Tab') {
+            document.body.classList.add('using-keyboard');
+            window.removeEventListener('keydown', handleFirstTab);
+            window.addEventListener('mousedown', handleMouseDownOnce);
+        }
+    }
+    function handleMouseDownOnce() {
+        document.body.classList.remove('using-keyboard');
+        window.removeEventListener('mousedown', handleMouseDownOnce);
+        window.addEventListener('keydown', handleFirstTab);
+    }
+    window.addEventListener('keydown', handleFirstTab);
+})();
 
 // Funções auxiliares
 function updateActiveNavLink() {
@@ -416,6 +450,16 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Segurança: Sanitização de inputs em formulários
+function sanitizeInput(str) {
+    const temp = document.createElement('div');
+    temp.textContent = str;
+    return temp.innerHTML;
+}
+
+// Refatoração: Exemplo de modularização - mover funções utilitárias para config.js
+// (Sugestão: importar/exportar funções utilitárias entre arquivos JS para evitar duplicidade)
+
 // Export para módulos (se necessário)
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -423,4 +467,25 @@ if (typeof module !== 'undefined' && module.exports) {
         filterPostsByCategory,
         debounce
     };
+}
+
+function askPushPermission() {
+  if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
+    alert('Push notifications não suportadas neste navegador.');
+    return;
+  }
+  Notification.requestPermission().then(function(permission) {
+    if (permission === 'granted') {
+      navigator.serviceWorker.ready.then(function(reg) {
+        reg.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: '<YOUR_PUBLIC_VAPID_KEY>' // Substitua por sua chave VAPID
+        }).then(function(sub) {
+          // Envie sub para o backend para salvar
+          console.log('Push subscription:', JSON.stringify(sub));
+          // Exemplo: fetch('/api/push/subscribe', { method: 'POST', body: JSON.stringify(sub) })
+        });
+      });
+    }
+  });
 }

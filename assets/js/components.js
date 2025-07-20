@@ -1,3 +1,21 @@
+// RESPAWN DIÁRIO - COMPONENTES JS PADRONIZADOS
+//
+// Este arquivo implementa componentes interativos reutilizáveis.
+// Todos seguem o padrão de integração com as classes CSS do design system.
+//
+// Componentes disponíveis:
+// - Tabs: .tabs, .tab-list, .tab-button, .tab-content
+// - Accordion: .accordion, .accordion-item, .accordion-header, .accordion-content
+// - Tooltip: [data-tooltip], .tooltip
+// - Progress Bar: .progress, .progress-bar (use data-progress="80" para valor)
+// - Rating: .rating, .rating-star (use createRatingComponent para JS dinâmico)
+// - Search: .search-box, .search-input, .search-results
+//
+// Padrões:
+// - Sempre use as classes CSS correspondentes.
+// - Garanta que elementos interativos tenham tabindex e role apropriados para acessibilidade.
+// - Consulte o início de components.css para exemplos visuais.
+
 // Components JavaScript - Respawn Diário
 document.addEventListener('DOMContentLoaded', function() {
     initializeComponents();

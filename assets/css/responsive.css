@@ -714,3 +714,10 @@
         padding: 60px 0;
     }
 }
+
+/* Responsividade: Adicione media queries para breakpoints extras se necessário */
+@media (max-width: 360px) {
+    .container, .section-title, .btn {
+        font-size: 0.9rem;
+    }
+}

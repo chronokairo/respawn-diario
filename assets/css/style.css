@@ -1,3 +1,14 @@
+/*
+RESPAWN DIÁRIO - PADRÃO DE ESTILO GLOBAL
+
+- Utilize sempre variáveis CSS para cores, fontes, bordas e espaçamentos.
+- Todos os botões, cards, inputs, modais, etc. devem usar as classes e tokens definidos aqui.
+- Estados interativos obrigatórios: :hover, :focus, :active, :disabled.
+- Use classes utilitárias para espaçamentos extras (ex: .mt-2, .mb-2, .p-2).
+- Para acessibilidade, garanta foco visível e contraste adequado.
+- Consulte o arquivo components.css para padrões de componentes interativos.
+*/
+
 /* Reset e Base Styles */
 * {
     margin: 0;
@@ -63,6 +74,51 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+/* Temas customizáveis adicionais */
+body.theme-solarized {
+    --bg-primary: #fdf6e3;
+    --bg-secondary: #eee8d5;
+    --bg-tertiary: #e1dbcd;
+    --bg-card: #f5eecb;
+    --primary-color: #268bd2;
+    --secondary-color: #d33682;
+    --accent-color: #b58900;
+    --text-primary: #073642;
+    --text-secondary: #586e75;
+    --text-muted: #93a1a1;
+    --gradient-primary: linear-gradient(135deg, #268bd2, #b58900);
+    --gradient-secondary: linear-gradient(135deg, #d33682, #6c71c4);
+}
+body.theme-dracula {
+    --bg-primary: #282a36;
+    --bg-secondary: #44475a;
+    --bg-tertiary: #343746;
+    --bg-card: #232339;
+    --primary-color: #bd93f9;
+    --secondary-color: #ff79c6;
+    --accent-color: #50fa7b;
+    --text-primary: #f8f8f2;
+    --text-secondary: #bd93f9;
+    --text-muted: #6272a4;
+    --gradient-primary: linear-gradient(135deg, #bd93f9, #50fa7b);
+    --gradient-secondary: linear-gradient(135deg, #ff79c6, #8be9fd);
+}
+body.theme-retro {
+    --bg-primary: #fffbe6;
+    --bg-secondary: #ffe4b5;
+    --bg-tertiary: #eecfa1;
+    --bg-card: #f5deb3;
+    --primary-color: #d2691e;
+    --secondary-color: #b22222;
+    --accent-color: #4682b4;
+    --text-primary: #222;
+    --text-secondary: #7c5c3b;
+    --text-muted: #bfa77a;
+    --gradient-primary: linear-gradient(135deg, #d2691e, #4682b4);
+    --gradient-secondary: linear-gradient(135deg, #b22222, #ffd700);
+}
+/* Para adicionar novos temas, siga o padrão acima e adicione uma nova classe body.theme-nome. */
 
 /* Tipografia */
 h1, h2, h3, h4, h5, h6 {
@@ -2302,10 +2358,6 @@ textarea.form-input {
     font-size: 0.875rem;
 }
 
-.guide-stats .stat-item i {
-    color: var(--primary-color);
-}
-
 .guide-author {
     display: flex;
     align-items: center;
@@ -3887,42 +3939,18 @@ textarea.form-input {
     content: '✓';
     position: absolute;
     color: var(--bg-primary);
-    font-size: 12px;
     font-weight: bold;
+    font-size: 12px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.checkbox-label {
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-}
-
-.checkbox-label a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.checkbox-label a:hover {
-    text-decoration: underline;
-}
-
-.forgot-password {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: var(--transition);
-}
-
-.forgot-password:hover {
-    text-decoration: underline;
-    color: var(--primary-dark);
-}
-
-.btn-full {
+.form-submit {
     width: 100%;
-    justify-content: center;
+    padding: 16px;
+    font-size: 1rem;
+    margin-top: 1rem;
 }
 
 .auth-divider {

@@ -157,17 +157,14 @@
                     </div>
                     
                     <div class="social-login">
-                        <button class="btn btn-social btn-google">
-                            <i class="fab fa-google"></i>
-                            Entrar com Google
+                        <button class="btn btn-social btn-google" onclick="window.location.href='/api/auth/google'">
+                            <i class="fab fa-google"></i> Entrar com Google
                         </button>
-                        <button class="btn btn-social btn-discord">
-                            <i class="fab fa-discord"></i>
-                            Entrar com Discord
+                        <button class="btn btn-social btn-facebook" onclick="window.location.href='/api/auth/facebook'">
+                            <i class="fab fa-facebook"></i> Entrar com Facebook
                         </button>
-                        <button class="btn btn-social btn-steam">
-                            <i class="fab fa-steam"></i>
-                            Entrar com Steam
+                        <button class="btn btn-social btn-discord" onclick="window.location.href='/api/auth/discord'">
+                            <i class="fab fa-discord"></i> Entrar com Discord
                         </button>
                     </div>
                     
@@ -518,6 +515,10 @@
                                         </label>
                                     </div>
                                 </div>
+
+                                <button class="btn btn-primary" onclick="askPushPermission()" style="margin-top:1rem;">
+                                  <i class="fas fa-bell"></i> Ativar Notificações Push
+                                </button>
                             </div>
                         </div>
 
@@ -571,6 +572,51 @@
                                                 </div>
                                                 <span class="theme-name">Auto</span>
                                                 <span class="theme-description">Segue o sistema</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="theme-option">
+                                            <input type="radio" name="theme" value="solarized">
+                                            <div class="theme-card solarized">
+                                                <div class="theme-preview" style="background: linear-gradient(135deg, #fdf6e3, #eee8d5);">
+                                                    <div class="preview-header" style="background: #268bd2;"></div>
+                                                    <div class="preview-content">
+                                                        <div class="preview-card" style="background: #b58900;"></div>
+                                                        <div class="preview-card" style="background: #d33682;"></div>
+                                                    </div>
+                                                </div>
+                                                <span class="theme-name">Solarized</span>
+                                                <span class="theme-description">Clássico claro/azul</span>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="theme-option">
+                                            <input type="radio" name="theme" value="dracula">
+                                            <div class="theme-card dracula">
+                                                <div class="theme-preview" style="background: linear-gradient(135deg, #282a36, #44475a);">
+                                                    <div class="preview-header" style="background: #bd93f9;"></div>
+                                                    <div class="preview-content">
+                                                        <div class="preview-card" style="background: #50fa7b;"></div>
+                                                        <div class="preview-card" style="background: #ff79c6;"></div>
+                                                    </div>
+                                                </div>
+                                                <span class="theme-name">Dracula</span>
+                                                <span class="theme-description">Escuro roxo/verde</span>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="theme-option">
+                                            <input type="radio" name="theme" value="retro">
+                                            <div class="theme-card retro">
+                                                <div class="theme-preview" style="background: linear-gradient(135deg, #fffbe6, #ffe4b5);">
+                                                    <div class="preview-header" style="background: #d2691e;"></div>
+                                                    <div class="preview-content">
+                                                        <div class="preview-card" style="background: #b22222;"></div>
+                                                        <div class="preview-card" style="background: #4682b4;"></div>
+                                                    </div>
+                                                </div>
+                                                <span class="theme-name">Retro</span>
+                                                <span class="theme-description">Vintage amarelo/marrom</span>
                                             </div>
                                         </label>
                                     </div>
@@ -1061,6 +1107,7 @@
 
     <!-- JavaScript -->
     <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/i18n.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/posts.js"></script>
     <script src="../assets/js/components.js"></script>

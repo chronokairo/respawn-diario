@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
     <!-- Header -->
     <header class="header">
         <section class="navbar-section">
@@ -35,44 +38,32 @@
                     <div class="nav-menu" id="nav-menu">
                         <ul class="nav-list">
                             <li class="nav-item">
-                                <a href="../index.html" class="nav-link">Home</a>
+                                <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="reviews.html" class="nav-link">Reviews</a>
+                                <a href="reviews.html" class="nav-link" data-i18n="nav.reviews">Reviews</a>
                             </li>
                             <li class="nav-item">
-                                <a href="noticias.html" class="nav-link">Notícias</a>
+                                <a href="guias.html" class="nav-link" data-i18n="nav.guides">Guias</a>
                             </li>
                             <li class="nav-item">
-                                <a href="guias.html" class="nav-link">Guias</a>
+                                <a href="noticias.html" class="nav-link" data-i18n="nav.news">Notícias</a>
                             </li>
                             <li class="nav-item">
-                                <a href="esports.html" class="nav-link">eSports</a>
+                                <a href="contato.html" class="nav-link" data-i18n="nav.contact">Contato</a>
                             </li>
                             <li class="nav-item">
-                                <a href="sobre.html" class="nav-link">Sobre</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="contato.html" class="nav-link active">Contato</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="perfil.html" class="nav-link">
-                                    <i class="fas fa-user-circle"></i>
-                                    Perfil
-                                </a>
+                                <a href="sobre.html" class="nav-link" data-i18n="nav.about">Sobre</a>
                             </li>
                         </ul>
                     </div>
                     
-                    <div class="nav-toggle" id="nav-toggle">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
-                        <i class="fas fa-moon"></i>
-                    </button>
+                    <!-- Seletor de idioma -->
+                    <select id="lang-switcher" aria-label="Idioma" style="margin-left:1rem">
+                        <option value="pt-BR">PT</option>
+                        <option value="en-US">EN</option>
+                    </select>
+                    <!-- ...existing code... -->
                 </div>
             </nav>
         </section>
@@ -82,8 +73,8 @@
     <section class="page-header">
         <div class="container">
             <div class="page-header-content">
-                <h1 class="page-title">Entre em Contato</h1>
-                <p class="page-subtitle">
+                <h1 class="page-title" data-i18n="contact.title">Entre em Contato</h1>
+                <p class="page-subtitle" data-i18n="contact.subtitle">
                     Dúvidas, sugestões, parcerias ou só quer bater um papo sobre games? 
                     Estamos aqui para você!
                 </p>
@@ -91,27 +82,29 @@
         </div>
     </section>
 
+    <!-- Main Content -->
+    <main id="main-content">
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
                 <!-- Contact Form -->
                 <div class="contact-form-container">
-                    <h2 class="form-title">Envie sua Mensagem</h2>
+                    <h2 class="form-title" data-i18n="form.title">Envie sua Mensagem</h2>
                     <form class="contact-form" id="contact-form">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name" class="form-label">Nome *</label>
-                                <input type="text" id="name" name="name" class="form-input" required>
+                                <label for="name" class="form-label" data-i18n="form.name">Nome *</label>
+                                <input type="text" id="name" name="name" class="form-input" required data-i18n="form.name">
                             </div>
                             <div class="form-group">
-                                <label for="email" class="form-label">Email *</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
+                                <label for="email" class="form-label" data-i18n="form.email">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" required data-i18n="form.email">
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject" class="form-label">Assunto *</label>
+                            <label for="subject" class="form-label" data-i18n="form.subject">Assunto *</label>
                             <select id="subject" name="subject" class="form-input" required>
                                 <option value="">Selecione um assunto</option>
                                 <option value="duvida">Dúvida Geral</option>
@@ -125,29 +118,15 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="platform" class="form-label">Plataforma Favorita</label>
-                            <select id="platform" name="platform" class="form-input">
-                                <option value="">Selecione (opcional)</option>
-                                <option value="pc">PC</option>
-                                <option value="playstation">PlayStation</option>
-                                <option value="xbox">Xbox</option>
-                                <option value="nintendo">Nintendo Switch</option>
-                                <option value="mobile">Mobile</option>
-                                <option value="multiplas">Múltiplas Plataformas</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Mensagem *</label>
-                            <textarea id="message" name="message" class="form-input" rows="6" 
-                                     placeholder="Conte-nos sobre sua dúvida, sugestão ou ideia..." required></textarea>
+                            <label for="message" class="form-label" data-i18n="form.message">Mensagem *</label>
+                            <textarea id="message" name="message" class="form-input" rows="6" required data-i18n="form.message" placeholder=""></textarea>
                         </div>
                         
                         <div class="form-group checkbox-group">
                             <label class="checkbox-label">
                                 <input type="checkbox" id="newsletter" name="newsletter" class="checkbox-input">
                                 <span class="checkbox-custom"></span>
-                                Quero receber novidades do Respawn Diário por email
+                                <span data-i18n="form.newsletter">Quero receber novidades do Respawn Diário por email</span>
                             </label>
                         </div>
                         
@@ -155,11 +134,11 @@
                             <label class="checkbox-label">
                                 <input type="checkbox" id="privacy" name="privacy" class="checkbox-input" required>
                                 <span class="checkbox-custom"></span>
-                                Concordo com a <a href="#" class="link">Política de Privacidade</a> *
+                                <span data-i18n="form.privacy">Concordo com a <a href='#' class='link'>Política de Privacidade</a> *</span>
                             </label>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary form-submit">
+                        <button type="submit" class="btn btn-primary form-submit" data-i18n="form.send">
                             <i class="fas fa-paper-plane"></i>
                             Enviar Mensagem
                         </button>
@@ -377,30 +356,43 @@
     <!-- JavaScript -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/i18n.js"></script>
     <script>
-        // Contact form handling
+        // Segurança: Sanitização de inputs em formulários de contato
+        function sanitizeInput(str) {
+            const temp = document.createElement('div');
+            temp.textContent = str;
+            return temp.innerHTML;
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             const contactForm = document.getElementById('contact-form');
-            
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    
-                    // Simulate form submission
+                    // Sanitizar todos os campos de texto
+                    const name = sanitizeInput(document.getElementById('name').value);
+                    const email = sanitizeInput(document.getElementById('email').value);
+                    const subject = sanitizeInput(document.getElementById('subject').value);
+                    const platform = sanitizeInput(document.getElementById('platform').value);
+                    const message = sanitizeInput(document.getElementById('message').value);
+                    // Simulação de envio seguro
                     const submitBtn = this.querySelector('.form-submit');
                     const originalText = submitBtn.innerHTML;
-                    
                     submitBtn.innerHTML = '<i class="fas fa-spinner loading"></i> Enviando...';
                     submitBtn.disabled = true;
-                    
                     setTimeout(() => {
-                        showToast('Mensagem enviada com sucesso! Responderemos em breve. 📧', 'success');
-                        this.reset();
                         submitBtn.innerHTML = originalText;
                         submitBtn.disabled = false;
-                    }, 2000);
+                        showToast('Mensagem enviada com sucesso!', 'success');
+                        this.reset();
+                    }, 1500);
                 });
             }
+        });
+
+        document.getElementById('lang-switcher').addEventListener('change', function() {
+            setLanguage(this.value);
         });
     </script>
 </body>

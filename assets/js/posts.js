@@ -130,33 +130,52 @@ document.addEventListener('DOMContentLoaded', function() {
         filteredPosts = [...allPosts];
     }
 
+    function showSkeletons(count = postsPerPage) {
+        if (!postsGrid) return;
+        postsGrid.innerHTML = '';
+        for (let i = 0; i < count; i++) {
+            const skeleton = document.createElement('div');
+            skeleton.className = 'post-card skeleton-card skeleton';
+            skeleton.innerHTML = `
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text" style="width:90%"></div>
+                <div class="skeleton skeleton-text" style="width:70%"></div>
+                <div class="skeleton skeleton-avatar"></div>
+                <div class="skeleton skeleton-btn"></div>
+            `;
+            postsGrid.appendChild(skeleton);
+        }
+    }
+
     function loadPosts() {
         if (!postsGrid) return;
+        showSkeletons();
+        setTimeout(() => {
+            const startIndex = (currentPage - 1) * postsPerPage;
+            const endIndex = startIndex + postsPerPage;
+            const postsToShow = filteredPosts.slice(startIndex, endIndex);
 
-        const startIndex = (currentPage - 1) * postsPerPage;
-        const endIndex = startIndex + postsPerPage;
-        const postsToShow = filteredPosts.slice(startIndex, endIndex);
+            if (currentPage === 1) {
+                postsGrid.innerHTML = '';
+            }
 
-        if (currentPage === 1) {
-            postsGrid.innerHTML = '';
-        }
+            postsToShow.forEach(post => {
+                const postElement = createPostElement(post);
+                postsGrid.appendChild(postElement);
+            });
 
-        postsToShow.forEach(post => {
-            const postElement = createPostElement(post);
-            postsGrid.appendChild(postElement);
-        });
+            // Animar novos posts
+            const newPosts = postsGrid.querySelectorAll('.post-card:not(.animated)');
+            newPosts.forEach((post, index) => {
+                post.classList.add('animated');
+                setTimeout(() => {
+                    post.classList.add('fade-in-up');
+                }, index * 100);
+            });
 
-        // Animar novos posts
-        const newPosts = postsGrid.querySelectorAll('.post-card:not(.animated)');
-        newPosts.forEach((post, index) => {
-            post.classList.add('animated');
-            setTimeout(() => {
-                post.classList.add('fade-in-up');
-            }, index * 100);
-        });
-
-        // Atualizar botão "Carregar Mais"
-        updateLoadMoreButton();
+            // Atualizar botão "Carregar Mais"
+            updateLoadMoreButton();
+        }, 800); // Simula tempo de carregamento
     }
 
     function createPostElement(post) {
@@ -276,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showPostModal(post) {
         const modal = document.createElement('div');
         modal.className = 'modal active';
-        
+        // Adiciona área para likes
         modal.innerHTML = `
             <div class="modal-content">
                 <div class="modal-header">
@@ -295,13 +314,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>Este é um exemplo de como seria o conteúdo completo do post. Em uma implementação real, aqui teria o conteúdo completo do artigo.</p>
                     <p>O sistema pode ser facilmente integrado com qualquer CMS ou sistema de backend para carregar o conteúdo dinamicamente.</p>
                     <div class="text-center mt-3">
-                        <button class="btn btn-primary">
+                        <button class="btn btn-primary share-btn">
                             <i class="fas fa-share"></i>
                             Compartilhar
                         </button>
-                        <button class="btn btn-secondary">
+                        <button class="btn btn-secondary like-btn" data-liked="false">
                             <i class="fas fa-heart"></i>
-                            Curtir
+                            Curtir <span class="like-count">...</span>
                         </button>
                     </div>
                 </div>
@@ -313,13 +332,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Event listeners
         const closeBtn = modal.querySelector('.modal-close');
         closeBtn.addEventListener('click', () => closeModal(modal));
-        
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeModal(modal);
             }
         });
-
         // Fechar com ESC
         const escHandler = (e) => {
             if (e.key === 'Escape') {
@@ -328,6 +345,115 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
         document.addEventListener('keydown', escHandler);
+
+        // Likes: integração com backend
+        const likeBtn = modal.querySelector('.like-btn');
+        const likeCountSpan = modal.querySelector('.like-count');
+        let userId = null;
+        try {
+            const user = JSON.parse(localStorage.getItem('respawn-diario-user'));
+            userId = user?.id;
+        } catch {}
+        // Função para atualizar contagem e estado
+        async function updateLikeState() {
+            try {
+                const res = await fetch(`http://localhost:3001/api/likes/${post.id}`);
+                const likes = await res.json();
+                likeCountSpan.textContent = likes.length;
+                if (userId && likes.some(l => l.user_id == userId)) {
+                    likeBtn.setAttribute('data-liked', 'true');
+                    likeBtn.classList.add('liked');
+                    likeBtn.innerHTML = '<i class="fas fa-heart"></i> Curtido <span class="like-count">' + likes.length + '</span>';
+                } else {
+                    likeBtn.setAttribute('data-liked', 'false');
+                    likeBtn.classList.remove('liked');
+                    likeBtn.innerHTML = '<i class="fas fa-heart"></i> Curtir <span class="like-count">' + likes.length + '</span>';
+                }
+            } catch {
+                likeCountSpan.textContent = '?';
+            }
+        }
+        updateLikeState();
+
+        likeBtn.addEventListener('click', async function(e) {
+            e.stopPropagation();
+            if (!userId) {
+                alert('Faça login para curtir posts!');
+                return;
+            }
+            const liked = likeBtn.getAttribute('data-liked') === 'true';
+            likeBtn.disabled = true;
+            try {
+                if (!liked) {
+                    await fetch('http://localhost:3001/api/likes', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ post_id: post.id, user_id: userId })
+                    });
+                } else {
+                    await fetch('http://localhost:3001/api/likes', {
+                        method: 'DELETE',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ post_id: post.id, user_id: userId })
+                    });
+                }
+                await updateLikeState();
+            } catch {
+                alert('Erro ao atualizar like.');
+            }
+            likeBtn.disabled = false;
+        });
+
+        // Compartilhamento social
+        const shareBtn = modal.querySelector('.share-btn');
+        shareBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const url = window.location.origin + window.location.pathname + `#post-${post.id}`;
+            const shareText = `${post.title} - Respawn Diário`;
+            if (navigator.share) {
+                navigator.share({
+                    title: post.title,
+                    text: post.excerpt,
+                    url: url
+                }).catch(() => {});
+            } else {
+                // Cria popup de opções
+                let popup = document.getElementById('share-popup');
+                if (popup) popup.remove();
+                popup = document.createElement('div');
+                popup.id = 'share-popup';
+                popup.style.position = 'fixed';
+                popup.style.top = '50%';
+                popup.style.left = '50%';
+                popup.style.transform = 'translate(-50%, -50%)';
+                popup.style.background = 'var(--bg-card)';
+                popup.style.padding = '1.5rem';
+                popup.style.borderRadius = '12px';
+                popup.style.boxShadow = '0 4px 32px rgba(0,0,0,0.25)';
+                popup.style.zIndex = 9999;
+                popup.innerHTML = `
+                    <h4 style="margin-bottom:1rem;">Compartilhar Post</h4>
+                    <div style="display:flex;gap:1rem;justify-content:center;align-items:center;">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank" rel="noopener" title="Facebook" style="font-size:1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}" target="_blank" rel="noopener" title="Twitter" style="font-size:1.5rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/?text=${encodeURIComponent(shareText + ' ' + url)}" target="_blank" rel="noopener" title="WhatsApp" style="font-size:1.5rem;"><i class="fab fa-whatsapp"></i></a>
+                        <button id="copy-link-btn" style="font-size:1.5rem;background:none;border:none;cursor:pointer;" title="Copiar Link"><i class="fas fa-link"></i></button>
+                    </div>
+                    <button id="close-share-popup" style="margin-top:1rem;" class="btn btn-secondary btn-full">Fechar</button>
+                `;
+                document.body.appendChild(popup);
+                document.getElementById('close-share-popup').onclick = () => popup.remove();
+                document.getElementById('copy-link-btn').onclick = async () => {
+                    try {
+                        await navigator.clipboard.writeText(url);
+                        if (window.showToast) window.showToast('Link copiado!', 'success');
+                        else alert('Link copiado!');
+                    } catch {
+                        alert('Não foi possível copiar o link.');
+                    }
+                };
+            }
+        });
     }
 
     function closeModal(modal) {

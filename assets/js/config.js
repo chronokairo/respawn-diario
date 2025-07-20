@@ -7,7 +7,7 @@ const CONFIG = {
         author: 'Respawn Diário Team'
     },
     api: {
-        baseUrl: 'https://api.respawndiario.com', // Para futuro backend
+        baseUrl: 'http://localhost:3001', // Servidor local
         timeout: 10000,
         retryAttempts: 3
     },

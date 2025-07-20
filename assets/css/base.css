@@ -239,3 +239,36 @@ body.dark-mode .theme-toggle {
 body.dark-mode .fa, body.dark-mode .fas, body.dark-mode .fab {
     color: var(--primary-color);
 }
+
+/* Acessibilidade: Melhor contraste para foco visível */
+:focus-visible {
+    outline: 3px solid #FFD600;
+    outline-offset: 3px;
+}
+
+/* Acessibilidade: Ajuste de contraste para links e botões em dark mode */
+body.dark-mode a, body.dark-mode .btn, body.dark-mode button {
+    color: #fff;
+}
+
+/* Acessibilidade: Indicador de navegação por teclado */
+body.using-keyboard *:focus {
+    box-shadow: 0 0 0 3px #00ff88;
+    outline: none;
+}
+
+/* Acessibilidade: Ajuste de contraste para modo de alto contraste */
+@media (prefers-contrast: more) {
+    :root {
+        --primary-color: #FFD600;
+        --secondary-color: #FF1744;
+        --accent-color: #2979FF;
+        --bg-primary: #000;
+        --bg-secondary: #111;
+        --bg-tertiary: #222;
+        --bg-card: #000;
+        --text-primary: #fff;
+        --text-secondary: #FFD600;
+        --text-muted: #ccc;
+    }
+}

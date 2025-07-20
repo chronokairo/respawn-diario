@@ -181,15 +181,13 @@ Simplesmente abra o arquivo `index.html` no seu navegador favorito.
 ### Konami Code
 Digite a sequência clássica `↑↑↓↓←→←→BA` para ativar o modo retro!
 
-## 🤝 Contribuindo
+## 📅 Changelog & Roadmap
 
-Este é um projeto de template/exemplo, mas melhorias são sempre bem-vindas:
+Veja o histórico de mudanças e próximos passos em [pages/changelog.html](pages/changelog.html).
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+## 🤝 Como Contribuir
+
+Veja o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para diretrizes de contribuição, padrões de código e fluxo de Pull Requests.
 
 ## 📄 Licença
 
